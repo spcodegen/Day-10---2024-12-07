@@ -1,9 +1,13 @@
-$('#p').click(function (e) { 
-    alert("Welcome our website")
+let isClicked;
+
+$('#btnAdd').click(function (e) {
+    isClicked =true;
+    if (isClicked) {
+        $('h1,p').addClass('back-color');
+    } else {
+        $('h1,p').removeClass('back-color');
+    } 
+    isClicked=false;   
 });
 
-$('#btnAdd').click(function (e) { 
-    alert("Added successfull")
-    
-    $(this).hide();
-});
+
